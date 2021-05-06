@@ -1,9 +1,22 @@
 import React from 'react';
-import Root from './src/index';
-import configureStore from './src/store/index';
+import { StyleSheet, Text, View } from 'react-native';
+import SplashScreen from 'react-native-splash-screen';
 
-const { persistor, store } = configureStore();
+export default class App extends React.Component {
+  componentDidMount() {
+    SplashScreen.hide();
+  }
+  render() {
+    return (
+      <View>
+        <View>
 
-export default function App() {
-  return <Root store={store} persistor={persistor} />;
+        </View>
+        <Text>
+          Now Loading...
+        </Text>
+      </View>
+    );
+  }
 }
+
