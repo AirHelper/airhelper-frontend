@@ -1,7 +1,6 @@
 import React from 'react';
 import { 
-  StyleSheet, Text, View, StatusBar, ImageBackground,
-  TouchableOpacity
+  StyleSheet, Text, View, StatusBar, ImageBackground, Image
 } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
@@ -12,10 +11,11 @@ import {
 } from 'react-native-responsive-dimensions';
 import CustomButton from './CustomButton';
 
+
 //상태바
 StatusBar.setBackgroundColor("transparent");
 StatusBar.setTranslucent(true);
-StatusBar.setBarStyle("white-content");
+StatusBar.setBarStyle("light-content");
 
 export default class App extends React.Component {
   componentDidMount() {
@@ -30,6 +30,7 @@ export default class App extends React.Component {
         >
         <View style={styles.container}>
           <View style={styles.sub_container}>
+            <Image source={require('./src/images/target.png')} resizeMode='contain' style={styles.target}/>
             <Text style={styles.main_title}>AIR</Text>
             <Text style={styles.sub_title}>HELPER</Text>
           </View>
@@ -71,6 +72,7 @@ const styles = StyleSheet.create({
   sub_container: {
     flex: 1, 
     justifyContent: 'flex-end',
+    position: 'relative'
   },
   btn_sort: {
     flex: 1, 
@@ -100,5 +102,11 @@ const styles = StyleSheet.create({
     fontSize: responsiveFontSize(1.3),
     textAlign: 'center',
     marginBottom: '5%'
+  },
+  target: {
+    opacity: 0.5,
+    position: 'absolute',
+    left: 60,
+    bottom: 90
   }
 });
