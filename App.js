@@ -33,7 +33,7 @@ export default class App extends React.Component {
             <Text style={styles.main_title}>AIR</Text>
             <Text style={styles.sub_title}>HELPER</Text>
           </View>
-          <View style={styles.sub_container}>
+          <View style={styles.sub_container, styles.btn_sort}>
             <CustomButton
               buttonColor={'#FEE500'}
               title={'카카오 계정으로 로그인'}
@@ -70,7 +70,12 @@ const styles = StyleSheet.create({
   },
   sub_container: {
     flex: 1, 
-    justifyContent: 'flex-end'
+    justifyContent: 'flex-end',
+  },
+  btn_sort: {
+    flex: 1, 
+    justifyContent: 'flex-end',
+    alignItems: 'center'
   },
   background_img: {
     width: responsiveWidth(100),
