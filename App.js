@@ -11,7 +11,7 @@ import {
 } from 'react-native-responsive-dimensions';
 import CustomButton from './CustomButton';
 
-
+//dfsdf
 //상태바
 StatusBar.setBackgroundColor("transparent");
 StatusBar.setTranslucent(true);
